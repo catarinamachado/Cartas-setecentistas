@@ -31,8 +31,12 @@ END                                     { j = 1;
                                           for (i = 1; i <= n; i++){
                                             a = gensub(/(.+):(.+)/, "\\1", "g", ind[i]);
                                             b = gensub(/(.+):(.+)/, "\\2", "g", ind[i]);
+                                            number = contaLocaisData[ind[i]];
 
-                                            print "<li><b>"a": Ano "b" -> </b>"contaLocaisData[ind[i]]" carta(s)</li></h4>" > "out/html/contaLocaisAno.html"
+                                            if(n == "1")
+                                              {print "<li><b>"a": Ano "b" -> </b>"number" carta</li></h4>" > "out/html/contaLocaisAno.html"}
+                                            else
+                                              {print "<li><b>"a": Ano "b" -> </b>"number" cartas</li></h4>" > "out/html/contaLocaisAno.html"}
                                           };
 
                                           print "</div></body></html>" > "out/html/contaLocaisAno.html"
