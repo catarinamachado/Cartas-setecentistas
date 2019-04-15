@@ -1,4 +1,4 @@
-BEGIN				                         { FS=";";
+BEGIN				                            { FS=";";
                                           print "<!DOCTYPE html><html>" > "out/html/contaLocaisAno.html";
                                           print "<head>" > "out/html/contaLocaisAno.html";
                                           print "<title>Cartas por Local e Data</title>" > "out/html/contaLocaisAno.html";

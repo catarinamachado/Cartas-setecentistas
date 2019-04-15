@@ -6,6 +6,7 @@ exec:
 	$(CXX) $(FLAGS) src/anos.gawk $(FILE)
 	$(CXX) $(FLAGS) src/cartas.gawk $(FILE)
 	$(CXX) $(FLAGS) src/contaLocais.gawk $(FILE)
+	$(CXX) $(FLAGS) src/contaAnos.gawk $(FILE)
 	$(CXX) $(FLAGS) src/contaLocaisAno.gawk $(FILE)
 	$(CXX) $(FLAGS) src/grafo.gawk $(FILE)
 

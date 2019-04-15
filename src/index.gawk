@@ -13,8 +13,8 @@ BEGIN				       { total=0;
 
                              print "<div style='float: left; width: 45%;'>" > "out/html/index.html";
                              print "<ul>" > "out/html/index.html";
-                             print "<li><b><h3><font color='#000000'>Cartas por Local/Ano</b></font></h3></a></li>" > "out/html/index.html";
-                             print "<p align='justify'><a href='contaLocais.html'><font color='#000000'>Número total de cartas por local</font></a> e <a href='contaLocaisAno.html'><font color='#000000'>número de cartas por local e ano.</font></a></p>" > "out/html/index.html";
+                             print "<li><b><h3><font color='#000000'>Cartas por Local e/ou Ano</b></font></h3></a></li>" > "out/html/index.html";
+                             print "<p align='justify'><a href='contaLocais.html'><font color='#000000'>Número total de cartas por local</font></a>, <a href='contaAnos.html'><font color='#000000'>número total de cartas por ano</font></a> e <a href='contaLocaisAno.html'><font color='#000000'>número de cartas por local e ano.</font></a></p>" > "out/html/index.html";
                              print "</ul>" > "out/html/index.html";
                              print "</div>" > "out/html/index.html";
 

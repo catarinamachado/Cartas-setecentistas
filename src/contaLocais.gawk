@@ -18,7 +18,7 @@ $3 ~ /[a-zA-Z]+/                        { split($3, local, "[ ]{2,10}|]");
 
 END                                     { for(l in contaLocais){
                                             number = contaLocais[l];
-                                            if(n == "1")
+                                            if(number == "1")
                                               {print "<li><b>"l" -> </b> "number" carta</li><br>" > "out/html/contaLocais.html"}
                                             else
                                               {print "<li><b>"l" -> </b> "number" cartas</li><br>" > "out/html/contaLocais.html"}
