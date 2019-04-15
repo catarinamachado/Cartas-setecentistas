@@ -16,6 +16,7 @@ $3 !~ /[a-zA-Z]+/ && $3 ~ /[ ]+/        { split($2, data, "[ ]{2,10}|[.]");
                                         }
 
 $3 ~ /[a-zA-Z]+/                        { split($3, local, "[ ]{2,10}|]");
+                                          sub(/ *$/, "", local[2]);
                                           split($2, data, "[ ]{2,10}|[.]");
                                           contaLocaisData[local[2]":"data[2]]++
                                         }
@@ -29,11 +30,11 @@ END                                     { j = 1;
                                           n = asort(ind);  #sort array by indexes
 
                                           for (i = 1; i <= n; i++){
-                                            a = gensub(/(.+):(.+)/, "\\1", "g", ind[i]);
-                                            b = gensub(/(.+):(.+)/, "\\2", "g", ind[i]);
-                                            number = contaLocaisData[ind[i]];
+                                            a = gensub(/(.+):(.+)/, "\\1", "g", ind[i]); #local
+                                            b = gensub(/(.+):(.+)/, "\\2", "g", ind[i]); #data
+                                            number = contaLocaisData[ind[i]];            #total de cartas
 
-                                            if(n == "1")
+                                            if(number == "1")
                                               {print "<li><b>"a": Ano "b" -> </b>"number" carta</li></h4>" > "out/html/contaLocaisAno.html"}
                                             else
                                               {print "<li><b>"a": Ano "b" -> </b>"number" cartas</li></h4>" > "out/html/contaLocaisAno.html"}

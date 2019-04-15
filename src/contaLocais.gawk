@@ -11,17 +11,16 @@ BEGIN				                            { FS=";";
 $3 !~ /[a-zA-Z]+/ && $3 ~ /[ ]+/        { contaLocais["NIL"]++ }
 
 $3 ~ /[a-zA-Z]+/                        { split($3, local, "[ ]{2,10}|]");
-                                          gsub(" ", "", local[2]);   #para tirar os espaços no final da linha
-                                          gsub(",", ", ", local[2]); #e manter o espaço depois da vírgula
+                                          sub(/ *$/, "", local[2]);
                                           contaLocais[local[2]]++
                                         }
 
 END                                     { for(l in contaLocais){
                                             number = contaLocais[l];
                                             if(number == "1")
-                                              {print "<li><b>"l" -> </b> "number" carta</li><br>" > "out/html/contaLocais.html"}
+                                              {print "<li><b>"l" -> </b>"number" carta</li><br>" > "out/html/contaLocais.html"}
                                             else
-                                              {print "<li><b>"l" -> </b> "number" cartas</li><br>" > "out/html/contaLocais.html"}
+                                              {print "<li><b>"l" -> </b>"number" cartas</li><br>" > "out/html/contaLocais.html"}
                                           };
                                           print "</body></html>" > "out/html/contaLocais.html"
                                         }

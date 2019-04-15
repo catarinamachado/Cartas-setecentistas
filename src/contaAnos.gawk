@@ -8,7 +8,7 @@ BEGIN				                    { FS=";";
                                           print "<h1><p align='center'><font color='#2874A6'>Cartas por Ano</font></p></h1>" > "out/html/contaAnos.html"
                                         }
 
-$3 ~ /[a-zA-Z]+/                        { split($2, data, "[ ]{2,10}|[.]");
+$2 ~ /[1-9]+/                           { split($2, data, "[ ]{2,10}|[.]");
                                           contaAnos[data[2]]++
                                         }
 

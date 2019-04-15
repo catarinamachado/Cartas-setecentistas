@@ -9,10 +9,10 @@ exec:
 	$(CXX) $(FLAGS) src/contaAnos.gawk $(FILE)
 	$(CXX) $(FLAGS) src/contaLocaisAno.gawk $(FILE)
 	$(CXX) $(FLAGS) src/grafo.gawk $(FILE)
+	$(CXX) $(FLAGS) src/index.gawk $(FILE)
 
 	dot -Tpng out/grafo/grafo.dot > out/grafo/grafo.png
 
-	$(CXX) $(FLAGS) src/index.gawk $(FILE)
 	open out/html/index.html
 
 clean:
