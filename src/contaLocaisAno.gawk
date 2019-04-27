@@ -1,13 +1,13 @@
 BEGIN				                            { FS=";";
                                           print "<!DOCTYPE html><html>" > "out/html/contaLocaisAno.html";
                                           print "<head>" > "out/html/contaLocaisAno.html";
-                                          print "<title>Cartas por Local e Data</title>" > "out/html/contaLocaisAno.html";
+                                          print "<title>Cartas por Local e Ano</title>" > "out/html/contaLocaisAno.html";
                                           print "<meta name='viewport' content='width=device-width, initial-scale=1'>" > "out/html/contaLocaisAno.html";
                                           print "<style>.colunas { line-height: 200%; margin-left: 60px; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; }</style>" > "out/html/contaLocaisAno.html";
                                           print "</head>" > "out/html/contaLocaisAno.html";
 
                                           print "<body>" > "out/html/contaLocaisAno.html";
-                                          print "<h1><p align='center'><font color='#2874A6'>Cartas por Local e Data</font></p></h1>" > "out/html/contaLocaisAno.html";
+                                          print "<h1><p align='center'><font color='#2874A6'>Cartas por Local e Ano</font></p></h1>" > "out/html/contaLocaisAno.html";
                                           print "<br><br><br><div class='colunas'>" > "out/html/contaLocaisAno.html"
                                         }
 

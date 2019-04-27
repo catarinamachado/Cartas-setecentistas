@@ -18,7 +18,7 @@ $0 ~ /[a-zA-Z]+/               { split($1, numero, "[ ]{2,10}");
                                  contaDatas[data[2]]++;
 
                                  if (contaDatas[data[2]] == 1) {
-                                     printf("<li><a href='%s'>Cartas de %s</a></li>", "anos/" data[2]".html", data[2]) > "out/html/anos.html" ;
+                                     printf("<li><a href='%s'>Cartas de %s</a></li>", "anos/" data[2]".html", data[2]) > "out/html/anos.html";
                                      printf("<h1><p align='center'><font color='#2874A6'>Cartas de %s</font></p></h1><br><br>",data[2]) > "out/html/anos/" data[2] ".html";
                                  };
 
